@@ -1,30 +1,38 @@
 body {
-    background: #fd746c;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  /* background: #fd746c;
+  background: -webkit-linear-gradient(
+    to right,
+    #ff9068,
+    #fd746c
+  );
+  background: linear-gradient(
+    to right,
+    #ff9068,
+    #fd746c
+  ); */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .searchbar {
-    width: 80%;
-    margin: 120px auto;
+  width: 80%;
+  margin: 120px auto;
 }
 
 .searchbar input {
-    width: 100%;
-    background-color: #f0f0f5;
-    border: 0;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 30px;
+  width: 100%;
+  background-color: #f0f0f5;
+  border: 0;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 30px;
 }
 
 .searchbar button {
-    margin: 10px;
+  margin: 10px;
 }
 
 main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
