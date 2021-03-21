@@ -41,7 +41,7 @@ app.post("/", (req, res) => {
                 res.render("weatherReport.ejs", {
                     locationName: locationData.name,
                     iconURL: iconURL,
-                    date: (new Date(weatherData.current.dt)).toLocaleDateString(),
+                    date: (new Date()).toLocaleDateString(),
                     temp: weatherData.current.temp,
                 });
             });
