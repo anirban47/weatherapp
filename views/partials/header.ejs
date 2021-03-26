@@ -1,46 +1,65 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Weather App</title>
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="icon" href="/images/favicon.ico" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <link
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet"
-        />
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-        <script>
-            function goBack() {
-                window.history.back();
-            }
-        </script>
-    </head>
 
-    <body>
-        <header>
-            <nav>
-                <div class="nav-wrapper deep-orange">
-                    <ul>
-                        <li>
-                            <a onclick="goBack()" class="left"
-                                ><i class="material-icons">arrow_back</i></a
-                            >
-                        </li>
-                    </ul>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="/images/favicon.ico" />
 
-                    <a href="#" class="brand-logo center"
-                        ><i class="medium material-icons">cloud_circle</i
-                        >Weather</a
-                    >
-                </div>
-            </nav>
-        </header>
-    </body>
+    <!-- jquery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+
+    <!-- Chartsjs CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <!-- Client-side custom JavaScript -->
+    <script defer>
+        function goBack() {
+            window.history.back();
+        }
+        $(document).ready(function () {
+            $(".dropdown-trigger").dropdown({
+                belowOrigin: true
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="dropdownList" class="dropdown-content">
+                <li><a href="Download">Download</a></li>
+                <li class="divider"></li>
+                <li><a href="GitHub">View on Github</a></li>
+            </ul>
+
+            <div class="nav-wrapper deep-orange">
+                <ul>
+                    <li>
+                        <a href="#" onclick="goBack()" class="left"><i class="material-icons">arrow_back</i></a>
+                    </li>
+                    <li class="right">
+                        <a href="#" class="dropdown-trigger" data-target="dropdownList"><i class="material-icons">more_vert</i></a>
+                    </li>
+                </ul>
+
+                <a href="#" class="brand-logo center"><i class="medium material-icons">cloud_circle</i>Weather</a>
+            </div>
+        </nav>
+    </header>
+</body>
+
 </html>
