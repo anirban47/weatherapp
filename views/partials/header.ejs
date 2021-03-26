@@ -16,12 +16,25 @@
             rel="stylesheet"
         />
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
     </head>
 
     <body>
         <header>
             <nav>
                 <div class="nav-wrapper deep-orange">
+                    <ul>
+                        <li>
+                            <a onclick="goBack()" class="left"
+                                ><i class="material-icons">arrow_back</i></a
+                            >
+                        </li>
+                    </ul>
+
                     <a href="#" class="brand-logo center"
                         ><i class="medium material-icons">cloud_circle</i
                         >Weather</a

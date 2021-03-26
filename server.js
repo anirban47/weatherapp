@@ -35,8 +35,8 @@ app.post("/", (req, res) => {
             axios.get(weatherAPI).then((response) => {
                 console.log(response);
                 const weatherData = response.data;
-                const icon = weatherData.current.weather[0].icon;
-                const iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`
+                const currentWeatherData = weatherData.current.weather[0];
+                const iconURL = `http://openweathermap.org/img/wn/${currentWeatherData.icon}@2x.png`
                 const date = weatherData.current.dt;
                 res.render("weatherReport.ejs", {
                     locationName: locationData.name,
