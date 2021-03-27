@@ -51,6 +51,11 @@ app.post("/", (req, res) => {
                     tempData: tempData,
                 });
             });
+        })
+        .catch((error) => {
+            res.render("error.ejs");
+            console.log(error);
+            
         });
 });
 
