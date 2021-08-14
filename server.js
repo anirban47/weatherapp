@@ -14,11 +14,11 @@ app.get("/", function (req, res) {
 
 app.post("/", (req, res) => {
     const query = req.body.query;
-    const API_KEY = process.env.API_KEY;
+    const OPENWEATHER_API_KEY = process.env.OPENWEATHER_API_KEY;
 
-    const geocodingAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=1&appid=${API_KEY}`;
+    const geocodingAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=1&appid=${OPENWEATHER_API_KEY}`;
 
-    //Handling the OpenWeatherMap API
+    // Handling the openweathermapAPI
     axios
         .get(geocodingAPI)
         .then((response) => {
@@ -29,7 +29,7 @@ app.post("/", (req, res) => {
             };
         })
         .then((locationData) => {
-            const weatherAPI = `https://api.openweathermap.org/data/2.5/onecall?lat=${locationData.lat}&lon=${locationData.lon}&exclude=minutely&units=metric&appid=${API_KEY}`;
+            const weatherAPI = `https://api.openweathermap.org/data/2.5/onecall?lat=${locationData.lat}&lon=${locationData.lon}&exclude=minutely&units=metric&appid=${OPENWEATHER_API_KEY}`;
             axios.get(weatherAPI).then((response) => {
                 const weatherData = response.data;
                 const currentWeatherData = weatherData.current.weather[0];
@@ -60,5 +60,5 @@ app.post("/", (req, res) => {
 });
 
 app.listen(process.env.PORT || 8000, () => {
-    console.log("Server is running on port 8000");
+    console.log("Server is running");
 });

@@ -1,0 +1,16 @@
+{
+    "name": "Weatherapp",
+    "short_name": "WeatherApp",
+    "start_url": "/",
+    "scope": "./",
+    "icons": [
+      {
+        "src": "/public/images/icon.png",
+        "sizes": "1024x1024",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#900C3F",
+    "background_color": "#333",
+    "display": "standalone"
+  }
